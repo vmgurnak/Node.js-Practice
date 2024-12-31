@@ -1,0 +1,15 @@
+description: ID is not found!
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - status
+        - message
+      properties:
+        status:
+          type: integer
+          example: 404
+        message:
+          type: string
+          example: 'ID 66630fa6bef3d5faca0e3c27 is not found'

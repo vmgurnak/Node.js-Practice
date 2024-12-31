@@ -1,0 +1,29 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Contacts app
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  description: This is a documentation of students app
+tags:
+  - name: Сontacts
+    description: Operations about contacts.
+  - name: Users
+    description: User operations.
+servers:
+  - url: http://127.0.0.1:3000
+paths:
+  /api/contacts:
+    get:
+      $ref: ../swagger/paths/contacts/getAllContacts.yaml
+  /api/contacts/{id}:
+    get:
+      $ref: ../swagger/paths/contacts/{id}/getOneContact.yaml
+    delete:
+      $ref: ../swagger/paths/contacts/{id}/deleteContact.yaml
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
